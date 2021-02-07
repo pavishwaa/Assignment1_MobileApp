@@ -1,0 +1,7 @@
+{
+  "name": "VP_Assignment#1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
