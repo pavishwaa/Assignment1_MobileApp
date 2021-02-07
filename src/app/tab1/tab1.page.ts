@@ -14,7 +14,4 @@ export class Tab1Page {
     test: '122,105', totalTests: '22,167,779', positive: '3.8%',
     testPerMillion: '583,230'
  };
-
-
-
 }

@@ -1,4 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output,EventEmitter} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DatashareService} from '../../datashare.service';
+
 
 @Component({
   selector: 'app-c2',
@@ -7,10 +10,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class C2Component implements OnInit {
 
-  constructor() { }
-
-  @Input() c2Data: any;
+  constructor(private route: ActivatedRoute, private sharedService: DatashareService) { }
+ 
+   @Input() c2Data: any;
   
-  ngOnInit() {}
 
+  ngOnInit() {
+  this.c2Data = this.route.snapshot.params.parm;
+  console.dir(this.route.snapshot);
+    
+  // this.sharedService.sharedMessage.subscribe(message => this.message= message); 
+
+}
 }
