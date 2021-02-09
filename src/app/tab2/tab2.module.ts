@@ -8,6 +8,8 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 import { ComponentsModule } from '../components/components.module';
+import { C1Component } from '../components/c1/c1.component';
+import { C2Component } from '../components/c2/c2.component';
 
 @NgModule({
   imports: [

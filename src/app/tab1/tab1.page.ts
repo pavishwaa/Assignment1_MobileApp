@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {Router, NavigationExtras} from '@angular/router'
 @Component({
   selector: 'app-tab1',
@@ -14,4 +14,9 @@ export class Tab1Page {
     test: '122,105', totalTests: '22,167,779', positive: '3.8%',
     testPerMillion: '583,230'
  };
+
+ ontarioData = {
+  cases: '278,207', resolved: '256,903', deaths: '6,505',
+  hospitalized: '926', icu: '335', onVentilator: '233' };
+
 }

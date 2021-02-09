@@ -8,10 +8,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
   <ion-input [(ngModel)]='message'></ion-input>
   <button (click)='newMessage()'>Set Message</button>
-
-
-  <app-c2></app-c2>
-</ion-content>
+  <app-c2 [c2Data] = 'ontarioData'></app-c2>  
+  <!-- <app-c2 [c2Data] = 'ontarioData'></app-c2> -->
+ </ion-content>

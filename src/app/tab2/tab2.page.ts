@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatashareService} from '../datashare.service';
-import { Router, NavigationExtras } from '@angular/router';
-
-
-
+import { Router} from '@angular/router';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -11,15 +8,27 @@ import { Router, NavigationExtras } from '@angular/router';
 })
 export class Tab2Page {
   message: any;
+  vaccineData: any;
  
   ontarioData = {
     cases: '278,207', resolved: '256,903', deaths: '6,505',
     hospitalized: '926', icu: '335', onVentilator: '233' };
-  constructor(private router: Router ,private sharedService: DatashareService) 
-  { }
-  ngOnInit() 
-  {this.sharedService.sharedMessage.subscribe(message => this.message= message);  }
-  newMessage() 
-  {this.sharedService.setMessage(this.message);  }
+  
+  constructor(private router: Router, private sharedService: DatashareService ) 
+  {       }
+   
+    
 
+  goPage1(){
+  this.router.navigate(['page1']).
+  then(nav=> {console.log(nav);}, 
+  err => {  console.log(err); });
+ }
+
+ ngOnInit() 
+ {this.sharedService.sharedMessage.subscribe(message => this.message= message);  }
+ newMessage() 
+ {this.sharedService.setMessage(this.message);  }
 }
+  
+
