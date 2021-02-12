@@ -1,3 +1,5 @@
+import { from } from "rxjs";
+import {VData} from 'src\interfaces\vaccineData.interface.ts';
 [
     {
         "report_date": "2020-12-24",

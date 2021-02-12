@@ -8,6 +8,7 @@ import { TabsPageRoutingModule } from './tabs-routing.module';
 import { TabsPage } from './tabs.page';
 import { Page1PageModule } from '../pages/page1/page1.module';
 import { ComponentsModule } from '../components/components.module';
+import { AppComponent } from '../app.component';
 
 @NgModule({
   imports: [

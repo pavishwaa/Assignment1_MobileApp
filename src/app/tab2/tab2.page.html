@@ -7,37 +7,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <app-c2 [c2Data]='ontarioData' [dataVacc]='vaccine'
+  (click)='goPage1()'></app-c2>
+  <br>
   
-  <app-c2 [c2Data] = 'ontarioData'></app-c2>
-  {{message}}--'from page1'<br>
+  <hr>
+    <p class="msg">Comment: {{message}}</p> 
+  <hr>
 
-  <ion-button (click)='goPage1()'>Go to Page 1</ion-button>
-  <!-- <ion-input [(ngModel)]='message'></ion-input>
-
-    <button (click)='newMessage()'>Set Message</button> -->
-  
-
-
-      <!-- <table class="table">
-      <th>report_date</th>
-      <li *ngFor="let vaccine of vaccineData">
-        {{vaccine.report_date}}
-      </li> -->
-      <!-- <tr>
-        <th>previous_day_doses_administered</th>
-        <td></td>
-      </tr>
-      <tr>
-        <th>total_doses_administered</th>
-        <td></td>
-      </tr>
-      <tr>
-        <th>total_doses_in_fully_vaccinated_individuals </th>
-        <td></td>
-      </tr>
-      <tr>
-        <th>total_individuals_fully_vaccinated</th>
-        <td></td>
-      </tr> -->
-    <!-- </table> -->
 </ion-content>

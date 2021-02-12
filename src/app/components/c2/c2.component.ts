@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output} from '@angular/core';
-
+import { Component, OnInit, Input} from '@angular/core';
+import {VData} from 'src/app/vaccineInterface'
 
 
 @Component({
@@ -9,9 +9,11 @@ import { Component, OnInit, Input, Output} from '@angular/core';
 })
 export class C2Component implements OnInit {
 
+  @Input() dataVacc: any;
+  @Input() c2Data: any;
   constructor() { }
  
-   @Input() c2Data: any;
-  
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.dataVacc)
+  }
 }

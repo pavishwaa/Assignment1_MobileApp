@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { VData } from './vaccineInterface';
+import vaccData from '../assets/vaccineData.json'
+
 
 @Component({
   selector: 'app-root',
@@ -7,17 +9,10 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  // vaccine: any = [];
 
-  constructor(private httpClient: HttpClient) {}
-
-  // ngOnInit(){
-  //   this.httpClient.get("src/assets/data/vaccineData.json")
-  //   .subscribe(data => {
-  //     console.log(data);
-  //     this.vaccine = data;
-  //   })
-  // }
-
+   vaccine: VData[] = vaccData.vaccineData;
+   ngOnInit(){
+     console.log(this.vaccine);
+   }
 }
 

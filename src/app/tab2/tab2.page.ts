@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DatashareService} from '../datashare.service';
 import { Router} from '@angular/router';
+import { VData } from 'src/app/vaccineInterface';
+import vaccData from 'src/assets/vaccineData.json';
+
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -8,12 +12,14 @@ import { Router} from '@angular/router';
 })
 export class Tab2Page {
   message: any;
-  vaccineData: any;
- 
+  
   ontarioData = {
     cases: '278,207', resolved: '256,903', deaths: '6,505',
     hospitalized: '926', icu: '335', onVentilator: '233' };
   
+    
+   vaccine: VData[] = vaccData.vaccineData;
+ 
   constructor(private router: Router, private sharedService: DatashareService ) 
   {       }
    
@@ -26,7 +32,10 @@ export class Tab2Page {
  }
 
  ngOnInit() 
- {this.sharedService.sharedMessage.subscribe(message => this.message= message);  }
+ {
+    this.sharedService.sharedMessage.subscribe(message => this.message= message); 
+    console.log(this.vaccine);
+  }
  newMessage() 
  {this.sharedService.setMessage(this.message);  }
 }

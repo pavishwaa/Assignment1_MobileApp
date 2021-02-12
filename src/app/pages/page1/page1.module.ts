@@ -9,6 +9,7 @@ import { Page1PageRoutingModule } from './page1-routing.module';
 import { Page1Page } from './page1.page';
 import { ComponentsModule } from 'src/app/components/components.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,6 +18,9 @@ import { ComponentsModule } from 'src/app/components/components.module';
     Page1PageRoutingModule,
     ComponentsModule
   ],
-  declarations: [Page1Page]
+  declarations: [Page1Page],
+  providers: [
+        
+  ]
 })
 export class Page1PageModule {}

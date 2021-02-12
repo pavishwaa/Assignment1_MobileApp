@@ -28,6 +28,12 @@
     <tr>
       <th>On ventilator</th>
       <td>{{c2Data.onVentilator}}</td>
-    </tr>    
+    </tr> 
+    <br><br>
+
   </table>
+
+   <tr *ngFor="let vc of dataVacc">
+      <td> {{vc.report_date}}</td>
+    </tr>
   
