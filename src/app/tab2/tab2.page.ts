@@ -12,24 +12,27 @@ import vaccData from 'src/assets/vaccineData.json';
 })
 export class Tab2Page {
   message: any;
-  
   ontarioData = {
     cases: '278,207', resolved: '256,903', deaths: '6,505',
     hospitalized: '926', icu: '335', onVentilator: '233' };
-  
+ 
     
    vaccine: VData[] = vaccData.vaccineData;
+  static indexValue: any;
+  
  
   constructor(private router: Router, private sharedService: DatashareService ) 
   {       }
-   
-    
 
-  goPage1(){
-  this.router.navigate(['page1']).
-  then(nav=> {console.log(nav);}, 
-  err => {  console.log(err); });
- }
+
+  goPage1(index){
+    this.router.navigate(['page1']).
+    then(nav=> {console.log(nav);}, 
+    err => {  console.log(err); });
+    Tab2Page.indexValue = index;
+    console.log(index);
+   }
+
 
  ngOnInit() 
  {
@@ -38,6 +41,9 @@ export class Tab2Page {
   }
  newMessage() 
  {this.sharedService.setMessage(this.message);  }
+
+ 
 }
+
   
 

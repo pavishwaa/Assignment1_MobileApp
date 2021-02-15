@@ -8,12 +8,15 @@
 
 <ion-content [fullscreen]="true">
 
-  <app-c2 [c2Data]='ontarioData' [dataVacc]='vaccine'
-  (click)='goPage1()'></app-c2>
-  <br>
-  
-  <hr>
+  <app-c2 [c2Data]='ontarioData'></app-c2>
+   <hr>
     <p class="msg">Comment: {{message}}</p> 
   <hr>
+  
+  <ion-item *ngFor="let vc of vaccine; let i = index;">
+    <div >
+        <div (click)="goPage1(i)">{{vc.report_date}}</div>
+    </div>
+</ion-item>
 
 </ion-content>

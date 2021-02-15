@@ -8,13 +8,33 @@
 </ion-header>
 
 <ion-content [fullscreen]="">
-  <app-c2 [c2Data]='ontarioData' [dataVacc]='vaccine'></app-c2>
+  <app-c2 [c2Data]='ontarioData'></app-c2>
   <br>
   <hr>
   <ion-input [(ngModel)]='message' class="msg"></ion-input>
   <button (click)='newMessage()'>Set Message</button>
   <hr>
   <br>
+
   
+    <ion-item>
+      <table class="table">     
+         <tr>
+        <td>Date</td>
+        <td>Previous day doses</td>
+        <td>Total doses</td>
+        <td>Total doses in fully vaccinated individuals</td>
+        <td>Total fully vaccinated individuals</td>
+      </tr>
+          <tr *ngFor="let vc of vaccine" >
+          <td>{{vc.report_date}}</td>
+          <td> {{vc.previous_day_doses_administered}}</td>
+          <td>{{vc.total_doses_administered}}</td>
+          <td>{{vc.total_doses_in_fully_vaccinated_individuals}}</td>
+          <td>{{vc.total_individuals_fully_vaccinated}}</td>
+          </tr>
+        </table>
+  
+  </ion-item>
 
  </ion-content>
