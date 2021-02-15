@@ -23,9 +23,7 @@ export class Page1Page {
    
   vaccine: VData[] = vaccData.vaccineData;
     
-  myVaccineData = vaccData.vaccineData.indexOf(this.index);
-    
-  
+  myVaccineData = vaccData.vaccineData.indexOf(this.index); 
   
   constructor(private sharedService: DatashareService) { }
   ngOnInit() 
