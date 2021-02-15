@@ -33,4 +33,6 @@ export class Page1Page {
       this.sharedService.sharedMessage.subscribe(message => this.message= message); 
       console.log( Tab2Page.indexValue);
   }
+  newMessage() 
+  {this.sharedService.setMessage(this.message);  }
 }
